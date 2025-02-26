@@ -86,7 +86,7 @@ const hiderHeader=function(){
   lastScrollPos=window.scrollY;
 }
 window.addEventListener("scroll",function(){
-  if(this.window.scrollY>=50{
+  if(this.window.scrollY>=50){
     header.classList.add("active");
     hiderHeader();
   } else{
