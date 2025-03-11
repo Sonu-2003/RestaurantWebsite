@@ -933,7 +933,11 @@ body.nav-active { overflow: hidden; }
 .special-dish-content{
   padding-block: 70px;
 }
-.special-dish .section-test{
+.special-dish .abs-img{
+  margin-inline:auto;
+  margin-block-end:12px;
+}
+.special-dish .section-text{
   margin-block:16px 40px;
 }
 
@@ -947,7 +951,7 @@ body.nav-active { overflow: hidden; }
 
 .special-dish.content .del{
   text-decoration: none;
-  color:var(--davys-grey);
+  color:var(--grey);
 }
 
 .special-dish-content .span{
@@ -955,6 +959,77 @@ body.nav-active { overflow: hidden; }
 }
 .special-dish .btn{
   margin-inline:auto;
+}
+
+.menu .section-title {
+  margin-block-end:40px;
+}
+.menu .grid-list{
+  margin-block-end:50px;
+}
+.menu-card{
+  display:flex;
+  align-items:flex-start;
+  gap:20px;
+}
+.hover\:card .card-banner{
+  background-color:var(--gold);
+}
+.hover\:card .card-banner .img-cover{
+  transition:var(--transition-2);
+}
+.hover\:card:is(:hover, :focus-within) .card-banner .img-cover{
+  opacity:0.7;
+  transform:scale(1.08);
+}
+.menu-card .card-banner{
+  flex-shrink:0;
+  border-radius:var(--radius-24);
+}
+.menu-card .card-title{
+  transition:var(--transition-1);
+}
+.menu-card .card-title:is(:hover,:focus-visible){
+  color:var(--gold);
+}
+.menu-card .badge{
+  background-color:var(--gold);
+  color:var(--eerie-black-1);
+  font-family:var(--fontFamily-forum);
+  max-width:max-content;
+  line-height:var(--lineHeight-6);
+  text-transform:uppercase;
+  padding-inline:10px;
+  margin-block-start:10px;
+}
+.menu-card .span{
+  color:var(--gold);
+  margin-block:10px;
+}
+.menu-card.card-text{
+  color:var(--silver);
+  line-height:var(--lineHeight-4);
+}
+.menu-text .span{
+  display:inline-block;
+  color:var(_-gold);
+}
+.menu .btn{
+  margin-inline:auto;
+  margin-block-start:26px;
+}
+.menu .shape{
+  display:block;
+  width:70%;
+
+}
+.menu .shape-2{
+  top:0;
+  left:0;
+}
+.menu .shape-3{
+  bottom:0;
+  right:0;
 }
 
 @media (min-width:992px){
@@ -1170,6 +1245,34 @@ body.nav-active { overflow: hidden; }
   .special-dish{
     overflow:visible;
     position:relative;
+  }
+  .special-dish .shape{
+    display:block;
+    right:0;
+    z-index:1;
+  }
+  .special-dish .shape-1 {
+    top:45%;
+  }
+  .special-dish .shape-2{
+    bottom:0;
+    transform:translateY(50%);
+    width: max-content;
+  }
+  .features {
+    overflow:visible;
+
+  }
+  .features .shape {
+    display:block;
+  }
+  .features .shape-1{
+    top:-100px;
+    right:0;
+  }
+  .features .shape-2 {
+    bottom:80px;
+    left:0;
   }
 }
 
